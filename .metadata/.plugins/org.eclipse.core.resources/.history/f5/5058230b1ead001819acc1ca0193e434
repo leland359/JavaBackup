@@ -1,0 +1,9 @@
+
+public class findDif {
+	public static void main (String [] args) {
+	int n1, n2, difference; 
+	n1 = 30;
+	n2 = 4;
+	difference = n1-n2;
+	}
+}

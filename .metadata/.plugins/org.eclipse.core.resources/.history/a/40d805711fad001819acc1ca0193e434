@@ -1,0 +1,15 @@
+
+public class findDif {
+	public static void main (String [] args) {
+		
+		/** @input n1 and n2 - two integers 
+		 *  @output difference - the difference between n1 and n2
+		 */
+		
+		int n1, n2, difference; 
+		n1 = 30;
+		n2 = 4;
+		difference = n1-n2;
+		System.out.println("The difference between " +n1 +" and " + n2 + " is " + difference);
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;rank&apos; in &apos;playingCards.Deck.Deck(...)&apos; to &apos;position&apos;&#x0A;- Original project: &apos;playingCards&apos;&#x0A;- Original element: &apos;playingCards.Deck.Deck(String[], String[], int[]).rank&apos;&#x0A;- Renamed element: &apos;rank&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;rank&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;playingCards{Deck.java[Deck~Deck~\[QString;~\[QString;~\[I@rank!1025!1036!1029!1032!I!0!false" name="position" references="true" stamp="1486421974648" version="1.0"/>
+</session>

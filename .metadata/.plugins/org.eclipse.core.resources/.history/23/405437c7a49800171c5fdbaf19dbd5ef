@@ -1,0 +1,12 @@
+package javaGrounds;
+
+public class JavaGrounds {
+	public static void main (String [] args){
+		int n = 8;
+		System.out.println(product(n));
+	}
+
+	private static int product(int n) {
+			return n * product(n-2);
+	}
+}

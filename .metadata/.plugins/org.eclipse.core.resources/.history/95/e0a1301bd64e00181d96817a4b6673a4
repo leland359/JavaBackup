@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.Random;
+
+public class codeMaker {
+	private final int numPegs = 4;
+	private final String [] colors = {"blue", "green", "red", "yellow", "white", "black"};
+	private ArrayList<String> code;
+
+	
+	public codeMaker(){
+		generateCode();
+	}
+		
+	void generateCode() {
+		Random colorPos = new Random();
+		int randomColor;
+		
+		for(int i = 0; i < numPegs; i++){
+			randomColor = colorPos.nextInt(numPegs);
+			code.add(colors[randomColor]);
+		}
+		
+	}
+	void checkPlayerGuess(){
+		
+	}
+	void revealCode(){
+		
+	}
+	
+}

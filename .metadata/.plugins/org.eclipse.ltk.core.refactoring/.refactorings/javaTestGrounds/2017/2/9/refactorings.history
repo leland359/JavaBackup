@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;param&apos; in &apos;javaTestGrounds.groundCoffee.main(...)&apos; to &apos;list&apos;&#x0A;- Original project: &apos;javaTestGrounds&apos;&#x0A;- Original element: &apos;javaTestGrounds.groundCoffee.main(String[]).param&apos;&#x0A;- Renamed element: &apos;param&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;param&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/&lt;javaTestGrounds{groundCoffee.java[groundCoffee~main~\[QString;@param!226!255!231!235!QList;!0!false" name="list" references="true" stamp="1488249060128" version="1.0"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;lastTwoLetters&apos; in &apos;alienAlphabetRevise.importFile()&apos; to &apos;secondToLastLetter&apos;&#x0A;- Original project: &apos;alienAlphabetRevise&apos;&#x0A;- Original element: &apos;alienAlphabetRevise.importFile().lastTwoLetters&apos;&#x0A;- Renamed element: &apos;lastTwoLetters&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;lastTwoLetters&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{alienAlphabetRevise.java[alienAlphabetRevise~importFile@lastTwoLetters!1469!1564!1476!1489!QString;!0!false" name="secondToLastLetter" references="true" stamp="1482274369853" version="1.0"/>
+</session>

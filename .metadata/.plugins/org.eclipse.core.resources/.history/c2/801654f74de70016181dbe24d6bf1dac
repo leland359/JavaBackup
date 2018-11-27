@@ -1,0 +1,19 @@
+
+//Miles Cumiskey 
+//area for testing and implementing projects
+
+package javaTestGrounds;
+
+public class groundCoffee {
+	public static void main(String[] args) {
+
+		int[][] table = { { 12, 2, 4, 8 }, { 4, -666, 1, 0 }, { 5, 5, 5, 5 } };
+		
+		for (int row = 0; row < table.length; row++) {
+			for (int column = 0; column < table[row].length; column++) {
+				System.out.print(table [row] [column] +" ");
+			}
+		System.out.println(" ");
+		}
+	}
+}

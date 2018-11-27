@@ -1,0 +1,14 @@
+import doodlepad.*;
+
+public class board {
+	public static void main (String [] args) {
+		int turnNum = 1;
+		setupTurn(turnNum);
+		
+	}
+
+	private static void setupTurn(int turnNum) {
+        Rectangle pegBoard = new Rectangle(25, 500, 75, 75);
+		
+	}
+}

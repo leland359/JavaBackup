@@ -1,0 +1,114 @@
+package javaTestGrounds;
+
+/*Sherry Lian, Roland Park Country School, 12/8/2016
+ * This is a program that can form the plural of words and attach suffixes 
+ * under a condition that letters A, C, S, and L are the vowels
+ * while all other letters are considered as consonants.
+ */
+
+import java.util.StringTokenizer;
+import java.io.*;
+
+public class groundCoffee {
+
+	// declare your io variables that are necessary for data file input
+	private static FileInputStream inFile;
+	private static InputStreamReader inReader;
+	private static  BufferedReader reader;
+	
+	// StringTokenizer variable used to separate line into different data elements
+	private static StringTokenizer strTkn;
+	
+	public static void main (String args[]) throws IOException{
+		initFile ();
+		getData ();
+		inFile.close();
+	}
+	
+	// the location of the test data
+	public static void initFile () throws IOException{
+		inFile = new FileInputStream ("/Users/lianyichen/Documents/!!VHSAPCSData/vowels.txt"); // this form of location is only for running on a Mac, notice the slash marks
+		inReader = new InputStreamReader(inFile);
+		reader = new BufferedReader(inReader);
+	}
+	
+	// process the data
+	public static void getData () throws IOException{
+		
+	    String line = reader.readLine();   //acquiring the data line as a string
+	    
+	    while (line != null) {
+	    	System.out.println("data line = " + line); // display the test data input
+	    	line = line.trim();
+	    	int blank = line.indexOf(" ");
+	    	String word = line.substring(0, blank);
+	    	String suffix = line.substring(blank + 1);
+	    	
+	    	// display the output
+	    	String plural = getPlural(word);
+	    	String together = addSuffix(word, suffix);
+	    	System.out.println("The plural is " + plural + " when you add the suffix you get " + together);
+	    	line = reader.readLine();
+	    }	
+	}
+	
+	// decide whether if the letter is vowel or not
+	public static boolean isVowel(String theStr){
+		return theStr.equals("A") ||
+				theStr.equals("C") ||
+				theStr.equals("S") ||
+				theStr.equals("L") ||
+				theStr.equals("a") ||
+				theStr.equals("c") ||
+				theStr.equals("s") ||
+				theStr.equals("l") ;
+	}
+	// create a method that forms the plural
+	public static String getPlural(String theWord){	
+		String lastChar = theWord.substring(theWord.length()-1); // find the last letter of the root
+		String nextLastChar = theWord.substring(theWord.length()-2, theWord.length()-1); // find the next last letter
+		
+		if(isVowel(lastChar) == isVowel(nextLastChar)) // ends with 2 consonants or 2 vowels
+			return theWord + lastChar + "H";
+		
+		else if(isVowel(lastChar)) //ends in a single vowel
+			return theWord.substring(0, theWord.length()-1) +"G";
+		
+		else return theWord + "GH"; //ends in a single consonant
+	}
+	
+	// create a method that forms the suffix
+	public static String addSuffix(String theWord, String lastWord){ 
+		String lastChar = theWord.substring(theWord.length()-1); // find the last letter of the root
+		String nextLastChar = theWord.substring(theWord.length()-2, theWord.length()-1); // find the next last letter
+		String firstSuffix = lastWord.substring(0, 1); // find the first letter of the ending
+		
+		if(isVowel(lastChar) == isVowel(nextLastChar)){ // ends with 2 consonants or 2 vowels
+			
+			if (isVowel(firstSuffix)) // start with a vowel
+				return theWord + firstSuffix + lastWord; 
+			
+			else{ // start with a consonant	
+				int i;
+				boolean lastType = isVowel(lastChar);
+				
+				for (i = theWord.length()-1; i >= 0; i--){ // drop the leftmost letter of the final sequence
+					if (isVowel(theWord.substring(i-2, i-1))!= lastType)
+						break; }
+				return theWord.substring(0, i-1) + theWord.substring(i) + lastWord;				
+			}
+		}
+		
+		else if(isVowel(lastChar)) { //ends in a single vowel
+			
+			if (isVowel(firstSuffix)) // start with a vowel
+				return theWord + lastWord.substring(1);
+			
+			else return theWord + firstSuffix + lastWord;} // start with a consonant
+		
+		else { //ends in a single consonant
+			return theWord + lastWord;
+		}
+	}
+}	
+

@@ -1,0 +1,62 @@
+//Miles Cumiskey, Hackettstown High School
+//12.11.16
+//Program that takes strings and processes them to be plural in an alien language
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class alienAlphabetRevise {
+	
+	private static FileInputStream inFile;
+	private static BufferedReader reader;
+	private static StringTokenizer strTkn;
+	private static String originalWord, suffix, line, pluralForm;
+	private static int countTokens;
+	private static String getPlural;
+	private static String addSuffix;
+
+	public static void main(String[] args) throws IOException {
+		
+		importFile();
+		//pluralize();
+	}
+	
+	private static void importFile() throws IOException {
+		try {
+			inFile = new FileInputStream("/Users/miles/compsciDownloads/vowel.txt");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		countTokens = strTkn.countTokens();
+		System.out.println(countTokens);
+		InputStreamReader inReader = new InputStreamReader(inFile);
+		reader = new BufferedReader(inReader);
+		
+	    while (line != null) {
+
+			String line = reader.readLine();
+			line = reader.readLine();
+			
+			strTkn = new StringTokenizer(line); 
+
+			originalWord = strTkn.nextToken();
+			suffix = strTkn.nextToken();
+			
+			System.out.println(originalWord +suffix); 
+	    }
+			   
+//			   pluralForm = pluralize(); //calls pluralform method
+//			   System.out.println("The plural is " + pluralForm);
+//			   line = reader.readLine();
+//		   }
+//	}
+//	
+//	private static String pluralize() {
+//		return getPlural;
+//	}
+
+}}

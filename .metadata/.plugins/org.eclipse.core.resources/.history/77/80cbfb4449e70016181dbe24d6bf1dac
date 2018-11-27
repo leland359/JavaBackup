@@ -1,0 +1,26 @@
+
+//Miles Cumsikey 
+//area for testing and implimenting projects
+
+package javaTestGrounds;
+
+public class groundCoffee {
+	public static void main(String[] args) {
+
+		int[][] matrix = { { 12, 2, 4, 8 }, { 4, 666, 1, 0 }, { 5, 5, 5, 5 } };
+		int numRows = matrix.length;
+		int numCols = matrix[numRows].length;
+		
+		for (int row = 0; row < matrix.length; row++) {
+			for (int column = 0; column < matrix[row].length; column++) {
+				if (matrix[row][column] < 0) {
+					System.out.println("There is a negitve number at " + column + ", " + row);
+					break;
+				}
+			}
+		}
+
+		// System.out.println("The array is " +matrix.length +" by "+matrix[column].length );
+
+	}
+}

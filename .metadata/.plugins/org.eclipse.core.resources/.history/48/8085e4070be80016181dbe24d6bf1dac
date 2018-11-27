@@ -1,0 +1,28 @@
+
+//Miles Cumiskey 
+//area for testing and implementing projects
+
+package javaTestGrounds;
+
+import java.util.*;
+
+public class groundCoffee {
+	public static void main(String[] args) {
+		List <Integer> list1 = new ArrayList<Integer>();
+		list1.add(10);
+		list1.add(100);
+		
+		int sumValue = 0;
+
+	
+		sumList(list1, sumValue);
+	   }
+
+	private static void sumList(List<Integer> list1, int sumValue) {
+		for (int i = 0; i < list1.size(); i++) {
+			sumValue = list1.get(i) + sumValue;
+			System.out.println(sumValue);
+		}
+		
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;companion&apos; in &apos;MyRectangleTester.main(...)&apos; to &apos;redFriend&apos;&#x0A;- Original project: &apos;DoodleProject&apos;&#x0A;- Original element: &apos;MyRectangleTester.main(String[]).companion&apos;&#x0A;- Renamed element: &apos;companion&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;companion&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{MyRectangleTester.java[MyRectangleTester~main~\[QString;@companion!212!276!224!232!QMyRectangle;!0!false" name="redFriend" references="true" stamp="1523050632198" version="1.0"/>
+</session>
